@@ -1,13 +1,28 @@
 import React from 'react'
-import Card from '../../UI/Card'
+import CardFromList from '../CardFromList';
 import s from "./Offer.module.sass"
 
 export default function Offer() {
+  const offerList =[
+    {
+      id: 1,
+      note: "Годовое ТО",
+      bgcolor: "#22356F"
+    },
+    {
+      id: 2,
+      note: "Выравнивание колес",
+      bgcolor: "#0052C1"
+    },
+    {
+      id: 3,
+      note: "Настройка переключателей",
+      bgcolor: "#76B58B"
+    }
+  ];
   return (
     <div className={s.offer}>
-      <Card style={{backgroundColor: "#22356F"}} text={"Годовое ТО"}/>
-      <Card style={{backgroundColor: "#0052C1"}} text={"Выравнивание колес"}/>
-      <Card style={{backgroundColor: "#76B58B"}} text={"Настройка переключателей"}/>
+      {offerList.map(t => <CardFromList key = {t.id} {...t} />)}
     </div>
   )
 }
