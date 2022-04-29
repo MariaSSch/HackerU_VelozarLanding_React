@@ -1,0 +1,60 @@
+header
+    display: flex
+    justify-content: space-around
+    align-items: center
+    .nav
+        display: flex
+        align-items: center
+        font-weight: 400
+        font-size: 14px
+        line-height: 16px
+        transition: top 0.5s
+        div+div
+            margin-left: 68px
+        &>div
+            padding: 16px
+            display: flex
+            align-items: center
+            a
+                text-decoration: none
+                color: #000
+                cursor: pointer
+        &>div:hover
+            box-shadow: 5px 5px 10px #000000
+    .nav.active
+        display: flex
+        flex-direction: row
+        width: 250px
+        top: 75px
+        left: 175px
+        div+div
+            margin-left: 0px
+    .nav_btn
+        border: 2px solid #F9B640
+        width: 50px
+        height: 50px
+        justify-content: center
+        align-items: center
+        font-size: 50px
+        justify-self: center
+        cursor: pointer
+        color: #F9B640
+        display: none
+@media (max-width: 900px)
+    header .nav div+div
+        margin-left: 30px
+@media (max-width: 700px)
+    header
+        position: relative
+        align-items: start
+        padding-top: 15px
+        .nav
+            position: absolute
+            top: -200px
+            left: -175px
+            flex-direction: column
+            div+div
+                margin-left: 0px
+        .nav_btn
+            display: flex
+            

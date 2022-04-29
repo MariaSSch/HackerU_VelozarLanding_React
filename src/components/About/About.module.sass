@@ -1,0 +1,39 @@
+.about
+    display: grid
+    grid-template-columns: 60% 40%
+    .info
+        display: grid
+        grid-template-columns: 68%
+        justify-content: center
+        align-items: center
+        background-color: #62D0DF
+        color: #fff
+        font-style: italic
+        font-weight: 400
+        height: 607px
+        h2
+            font-size: 36px
+            line-height: 28px
+            letter-spacing: -0.006em
+            margin-bottom: 75px
+        p
+            font-size: 24px
+            line-height: 35px
+            //width: 586px
+    .red_bike
+        background-position: center
+@media (max-width: 900px)
+    .about
+        grid-template-columns: 100%
+        grid-template-rows: 600px 604px
+@media (max-width: 700px)
+    .about .info
+        height: 600px
+        align-content: center
+        h2
+            font-size: 30px
+            margin-bottom: 40px
+        p
+            font-size: 20px
+ 
+        
